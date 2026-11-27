@@ -28,7 +28,7 @@ public class FlagService {
             throw new ConflictException("A flag with key '" + key + "' already exists in this project");
         }
 
-        Flag flag = new Flag(UUID.randomUUID(), project.getOrganizationId(), project.getId(), key, name, description, false);
+        Flag flag = new Flag(UUID.randomUUID(), project.getOrganizationId(), project.getId(), key, name, false);
         return flagRepository.save(flag);
     }
 
